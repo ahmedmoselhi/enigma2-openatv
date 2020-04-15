@@ -707,10 +707,8 @@
 	</map>
 
 	<map context="TvRadioActions">
-		<key id="KEY_TV" mapto="keyTV" flags="b"/>
-		<key id="KEY_TV2" mapto="keyTV" flags="b"/>
-		<key id="KEY_RADIO" mapto="keyRadio" flags="b"/>
-		<key id="KEY_0" mapto="keyTV" flags="b"/>
+		<key id="KEY_TV" mapto="keyTV" flags="m"/>
+		<key id="KEY_RADIO" mapto="keyRadio" flags="m"/>
 	</map>
 
 	<map context="TimerEditActions">
@@ -990,10 +988,7 @@
 		<key id="KEY_RECORD" mapto="rec_long" flags="l"/>
 		<key id="KEY_RADIO" mapto="radio" flags="b"/>
 		<key id="KEY_RADIO" mapto="radio_long" flags="l"/>
-		<key id="KEY_TV" mapto="tv" flags="b"/>
-		<key id="KEY_TV" mapto="showTv_long" flags="l"/>
-		<key id="KEY_TV2" mapto="toggleTvRadio" flags="b"/>
-		<key id="KEY_TV2" mapto="toggleTvRadio_long" flags="l"/>
+		<key id="KEY_TV" mapto="showTv" flags="b"/>
 		<key id="KEY_TEXT" mapto="text" flags="m"/>
 		<key id="KEY_HELP" mapto="displayHelp" flags="b"/>
 		<key id="KEY_HELP" mapto="displayHelp_long" flags="l"/>
@@ -1110,9 +1105,6 @@
 		<key id="KEY_VOD" mapto="vod_long" flags="l"/>
 		<key id="KEY_TVSAT" mapto="tvsat" flags="b"/>
 		<key id="KEY_TVSAT" mapto="tvsat_long" flags="l"/>
-		<key id="KEY_PICASA" mapto="picasa" flags="m"/>
-		<key id="KEY_SHOUTCAST" mapto="shoutcast" flags="m"/>
-		<key id="KEY_YOUTUBE" mapto="youtube" flags="m"/>
 		<key id="KEY_SPARK" mapto="spark" flags="m"/>
 		<key id="KEY_FIND" mapto="find" flags="b"/>
 		<key id="KEY_FIND" mapto="find_long" flags="l"/>
