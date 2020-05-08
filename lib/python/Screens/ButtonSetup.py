@@ -159,6 +159,8 @@ def getButtonSetupKeys():
 		(_("USB long"), "usb_long", ""),
 		(_("Fast"), "fast", ""),
 		(_("Fast long"), "fast_long", ""),
+		(_("Keyboard"), "keyboard", ""),
+		(_("Keyboard long"), "keyboard_long", ""),
 		(_("ZOOM"), "zoom", ""),
 		(_("ZOOM long"), "zoom_long", "")]
 
