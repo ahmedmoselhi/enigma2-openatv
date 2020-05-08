@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: OpenATV\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-30 14:34+0100\n"
-"PO-Revision-Date: 2020-03-20 12:38+0000\n"
+"PO-Revision-Date: 2020-04-30 12:38+0000\n"
 "Last-Translator: pololoko111 <pololoko111@o2.pl>\n"
 "Language-Team: Poland\n"
 "Language: pl\n"
@@ -47,11 +47,6 @@ msgid ""
 msgstr ""
 "\n"
 " Nie zainstalowano Kodi. Zainstalować teraz?"
-
-msgid ""
-"\n"
-"%Y/%m/%d  %H:%M - "
-msgstr ""
 
 msgid ""
 "\n"
@@ -251,6 +246,10 @@ msgstr ""
 msgid "   (2.1 GHz)"
 msgstr ""
 
+#, python-format
+msgid "  (%s x %s)"
+msgstr ""
+
 msgid "  Menu key : Select quad channel"
 msgstr " Klawisz menu: Wybierz czterokanałowy kanał"
 
@@ -347,9 +346,6 @@ msgstr "!! Aktualizacja Bootloadera !!"
 msgid "%-H:%M"
 msgstr ""
 
-msgid "%-H:%M - "
-msgstr ""
-
 msgid "%-H:%M:%S"
 msgstr ""
 
@@ -394,6 +390,27 @@ msgid "%-d-%b"
 msgstr ""
 
 msgid "%-d-%b-%Y"
+msgstr ""
+
+msgid "%-d. %B %Y"
+msgstr ""
+
+msgid "%-d. %b"
+msgstr ""
+
+msgid "%-d. %b %Y"
+msgstr ""
+
+msgid "%-d.%-m"
+msgstr ""
+
+msgid "%-d.%-m.%Y"
+msgstr ""
+
+msgid "%-d.%m"
+msgstr ""
+
+msgid "%-d.%m.%Y"
 msgstr ""
 
 msgid "%-d/%-m"
@@ -448,10 +465,6 @@ msgid "%.2f GB"
 msgstr ""
 
 #, python-format
-msgid "%02d.%02d - %02d.%02d (%s%d min)"
-msgstr ""
-
-#, python-format
 msgid "%02d.%02d."
 msgstr ""
 
@@ -490,6 +503,24 @@ msgid "%A %-d-%B"
 msgstr ""
 
 msgid "%A %-d-%B-%Y"
+msgstr ""
+
+msgid "%A %-d. %B"
+msgstr ""
+
+msgid "%A %-d. %B %Y"
+msgstr ""
+
+msgid "%A %-d.%-m"
+msgstr ""
+
+msgid "%A %-d.%-m.%Y"
+msgstr ""
+
+msgid "%A %-d.%m"
+msgstr ""
+
+msgid "%A %-d.%m.%Y"
 msgstr ""
 
 msgid "%A %-d/%-m"
@@ -576,6 +607,24 @@ msgstr ""
 msgid "%A %d-%B-%Y"
 msgstr ""
 
+msgid "%A %d. %B"
+msgstr ""
+
+msgid "%A %d. %B %Y"
+msgstr ""
+
+msgid "%A %d.%-m"
+msgstr ""
+
+msgid "%A %d.%-m.%Y"
+msgstr ""
+
+msgid "%A %d.%m"
+msgstr ""
+
+msgid "%A %d.%m.%Y"
+msgstr ""
+
 msgid "%A %d/%-m"
 msgstr ""
 
@@ -586,9 +635,6 @@ msgid "%A %d/%m"
 msgstr ""
 
 msgid "%A %d/%m/%Y"
-msgstr ""
-
-msgid "%A %e %b"
 msgstr ""
 
 msgid "%A %m/%-d"
@@ -717,6 +763,27 @@ msgstr ""
 msgid "%a %-d-%b-%Y"
 msgstr ""
 
+msgid "%a %-d. %B %Y"
+msgstr ""
+
+msgid "%a %-d. %b"
+msgstr ""
+
+msgid "%a %-d. %b %Y"
+msgstr ""
+
+msgid "%a %-d.%-m"
+msgstr ""
+
+msgid "%a %-d.%-m.%Y"
+msgstr ""
+
+msgid "%a %-d.%m"
+msgstr ""
+
+msgid "%a %-d.%m.%Y"
+msgstr ""
+
 msgid "%a %-d/%-m"
 msgstr ""
 
@@ -835,6 +902,27 @@ msgid "%a %d-%b"
 msgstr ""
 
 msgid "%a %d-%b-%Y"
+msgstr ""
+
+msgid "%a %d. %B %Y"
+msgstr ""
+
+msgid "%a %d. %b"
+msgstr ""
+
+msgid "%a %d. %b %Y"
+msgstr ""
+
+msgid "%a %d.%-m"
+msgstr ""
+
+msgid "%a %d.%-m.%Y"
+msgstr ""
+
+msgid "%a %d.%m"
+msgstr ""
+
+msgid "%a %d.%m.%Y"
 msgstr ""
 
 msgid "%a %d/%-m"
@@ -1039,14 +1127,29 @@ msgstr ""
 msgid "%d-%m"
 msgstr ""
 
+msgid "%d. %B %Y"
+msgstr ""
+
+msgid "%d. %b"
+msgstr ""
+
+msgid "%d. %b %Y"
+msgstr ""
+
+msgid "%d.%-m"
+msgstr ""
+
+msgid "%d.%-m.%Y"
+msgstr ""
+
 #, python-format
 msgid "%d.%03d GB"
 msgstr ""
 
-msgid "%d.%B %Y"
+msgid "%d.%m"
 msgstr ""
 
-msgid "%d.%m.   "
+msgid "%d.%m.%Y"
 msgstr ""
 
 msgid "%d/%-m"
@@ -1160,12 +1263,16 @@ msgid "%s (%s)\n"
 msgstr ""
 
 #, python-format
+msgid "%s - %s (%s%d min)"
+msgstr ""
+
+#, python-format
 msgid "%s - Setup"
 msgstr "%s - Ustawienia"
 
 #, python-format
 msgid "%s - extraction errors."
-msgstr ""
+msgstr "%s - błędy ekstrakcji."
 
 #, python-format
 msgid "%s Setup"
@@ -1174,10 +1281,6 @@ msgstr "%s Ustawienia"
 #, python-format
 msgid "%s additional screens"
 msgstr "%s dodatkowe ekrany"
-
-#, python-format
-msgid "%s build date %s"
-msgstr ""
 
 #. TRANSLATORS: The satellite with name '%s' is no longer used after a configuration change. The user is asked whether or not the satellite should be deleted.
 #, python-format
@@ -1269,7 +1372,7 @@ msgid "'weatherplugin' is not installed!"
 msgstr "'Weatherplugin' nie jest zainstalowany!"
 
 msgid "( All readers)"
-msgstr "(Wszystkie czytniki)"
+msgstr "( Wszystkie czytniki)"
 
 #, python-format
 msgid "(%d jobs)"
@@ -1286,7 +1389,10 @@ msgid "(Selectmode)"
 msgstr "(Wybierz tryb)"
 
 msgid "(Show only reader:"
-msgstr "(Pokaż tylko czytnik):"
+msgstr "(Pokaż tylko czytnik:"
+
+msgid "(current image)"
+msgstr "(aktualny obraz)"
 
 msgid "(e.g. TV wakeup, but not switched to correct input)"
 msgstr "(np. pobudka TV, ale nie została przełączona na prawidłowe wejście)"
@@ -2152,7 +2258,7 @@ msgid "Aborting updateprogress"
 msgstr "Przerywanie postępu aktualizacji"
 
 msgid "About"
-msgstr "O Odbiorniku"
+msgstr "Odbiornik"
 
 msgid "About..."
 msgstr "Informacje..."
@@ -3159,6 +3265,12 @@ msgstr "Zarządzanie kopiami zapasowymi"
 msgid "Backup Mode"
 msgstr "Tryb tworzenia kopii zapasowej"
 
+msgid "Backup Mode: Flash Online\n"
+msgstr "Tryb tworzenia kopii zapasowych: Flash Online\n"
+
+msgid "Backup Mode: USB Recovery\n"
+msgstr "Tryb tworzenia kopii zapasowych: USB Recovery\n"
+
 msgid "Backup Settings"
 msgstr "Kopia Ustawień"
 
@@ -3439,7 +3551,7 @@ msgstr "Buforowanie %d%%"
 msgid "Buffers:"
 msgstr "Bufory:"
 
-#, python-format
+#, fuzzy, python-format
 msgid "Build:\t\t%s"
 msgstr "Kompilacja:\t\t%s"
 
@@ -3614,8 +3726,8 @@ msgid "CPU priority for script execution"
 msgstr "Priorytet procesora do wykonania skryptu"
 
 #, python-format
-msgid "CPU:\t\t%s"
-msgstr "Procesor:\t\t%s"
+msgid "CPU:\t\t%s  (%s)  %s cores"
+msgstr "Procesor:\t\t%s  (%s)  %s Rdzenie"
 
 #, python-format
 msgid "CPU: %s"
@@ -3640,7 +3752,7 @@ msgid "Cache thumbnails"
 msgstr "Przechowuj miniatury"
 
 msgid "Cached:"
-msgstr "W pamięci podręcznej:"
+msgstr "W Pamięci Podręcznej:"
 
 msgid "Calculate"
 msgstr "Obliczanie"
@@ -3760,6 +3872,12 @@ msgstr "Anulować wykonanie?"
 
 msgid "Cancel save timeshift as movie"
 msgstr "Anuluj zapis timeshiftu jako filmu"
+
+msgid "Cancel the image selection and exit"
+msgstr "Anuluj wybór obrazu i wyjdź"
+
+msgid "Cancel the image selection and exit all menus"
+msgstr "Anuluj wybór obrazu i zamknij wszystkie menu"
 
 msgid "Cancel the selection"
 msgstr "Anuluj wybór"
@@ -3909,9 +4027,6 @@ msgstr "Info Kanału"
 
 msgid "Channel List"
 msgstr "Lista Kanałów"
-
-msgid "Channel Name"
-msgstr "Nazwa Kanału"
 
 msgid "Channel button always changes sides"
 msgstr "Przycisk kanału zawsze zmienia strony"
@@ -4242,9 +4357,6 @@ msgstr "Klienci"
 
 msgid "Clock"
 msgstr "Zegar"
-
-msgid "Clock:"
-msgstr "Zegar:"
 
 msgid "Clone TV screen to LCD"
 msgstr "Lustro TV obraz na LCD"
@@ -4712,6 +4824,9 @@ msgstr "Skonfiguruj który tuner będzie wykorzystany, gdy posiadasz więcej ni�
 
 msgid "Configure your NTP server."
 msgstr "Tutaj możesz zmienić synchronizację serwera NTP."
+
+msgid "Control LED can be turned on or off here."
+msgstr "Kontrolną diodę LED można tutaj włączyć lub wyłączyć."
 
 msgid "Configure your Network"
 msgstr "Konfigurowanie sieci"
@@ -5282,6 +5397,15 @@ msgstr ""
 msgid "Dayname D-Month-Year"
 msgstr ""
 
+msgid "Dayname D. Month Year"
+msgstr ""
+
+msgid "Dayname D.M.Year"
+msgstr ""
+
+msgid "Dayname D.MM.Year"
+msgstr ""
+
 msgid "Dayname D/M/Year"
 msgstr ""
 
@@ -5292,6 +5416,15 @@ msgid "Dayname DD Month Year"
 msgstr ""
 
 msgid "Dayname DD-Month-Year"
+msgstr ""
+
+msgid "Dayname DD. Month Year"
+msgstr ""
+
+msgid "Dayname DD.M.Year"
+msgstr ""
+
+msgid "Dayname DD.MM.Year"
 msgstr ""
 
 msgid "Dayname DD/M/Year"
@@ -5382,16 +5515,16 @@ msgid "Default (Timeshift)"
 msgstr "Domyślnie (Timeshift)"
 
 msgid "Default CPU priority (nice) for executed scripts. This can reduce the load so that scripts do not interfere with the rest of the system. (higher values = lower priority)"
-msgstr ""
+msgstr "Domyślny priorytet procesora (miły) dla wykonywanych skryptów. Może to zmniejszyć obciążenie, aby skrypty nie kolidowały z resztą systemu. (wyższe wartości = niższy priorytet)"
 
 msgid "Default Folder"
 msgstr "Domyślny folder"
 
 msgid "Default I/O priority (ionice) for executed scripts. This can reduce the load so that scripts do not interfere with the rest of the system. (higher values = lower priority)"
-msgstr ""
+msgstr "Domyślny priorytet I/O (ionice) dla wykonywanych skryptów. Może to zmniejszyć obciążenie, aby skrypty nie kolidowały z resztą systemu. (wyższe wartości = niższy priorytet)"
 
 msgid "Default Modes Selected."
-msgstr ""
+msgstr "Wybrane Tryby Domyślne."
 
 msgid "Default Services Scanner"
 msgstr "Domyślna Wyszukiwarka Kanałów"
@@ -5569,11 +5702,14 @@ msgstr "Usuń pozycję z listy"
 msgid "Delete saved playlist"
 msgstr "Usuń zapisaną listę odtwarzania"
 
-msgid "Delete the character to the left of text buffer cursor"
-msgstr "Usuń znak po lewej stronie kursora bufora tekstowego"
+msgid "Delete the all the text"
+msgstr "Usuń cały tekst"
 
-msgid "Delete the character under the text buffer cursor"
-msgstr "Usuń znak pod kursorem bufora tekstu"
+msgid "Delete the character to the left of text cursor"
+msgstr "Usuń znak po lewej stronie kursora tekstowego"
+
+msgid "Delete the character under the text cursor"
+msgstr "Usuń znak pod kursorem tekstowym"
 
 msgid "Delete the current timeshift buffer and restart timeshift"
 msgstr "Usuń bieżący bufor timeshiftu i ponownie uruchom timeshift"
@@ -5722,7 +5858,7 @@ msgid "Directory browser"
 msgstr "Przeglądarka katalogów"
 
 msgid "Directory long"
-msgstr ""
+msgstr "Katalog (długo)"
 
 msgid "Disable"
 msgstr "Wyłączone"
@@ -5738,9 +5874,6 @@ msgstr "Wyłącz MiniTV"
 
 msgid "Disable Picture in Picture"
 msgstr "Wyłącz PIP"
-
-msgid "Disable all VFD Symbols"
-msgstr "Wyłącz wszystkie symbole na VFD"
 
 msgid "Disable background scanning"
 msgstr "Wyłącz skanowanie w tle"
@@ -5981,10 +6114,6 @@ msgstr "Chcesz obejrzeć to DVD przed nagraniem?"
 
 msgid "Do you want to produce this collection?"
 msgstr "Czy chcesz tworzyć tę kolekcję?"
-
-#, python-format
-msgid "Do you want to reboot now the image in slot %s?"
-msgstr "Czy chcesz teraz zrestartować obraz w gnieździe %s?"
 
 #, python-format
 msgid "Do you want to reboot your %s %s"
@@ -7460,8 +7589,8 @@ msgid "Front USB 3.0"
 msgstr "Przedni USB 3.0"
 
 #, python-format
-msgid "Frontprocessor version: %s"
-msgstr "Procesor Przedni-Wersja: %s"
+msgid "Frontprocessor version:\t%s"
+msgstr "Wersja frontprocesora:\t%s"
 
 msgid "Full Image Backup "
 msgstr "Pełna kopia zapasowa obrazu "
@@ -8352,16 +8481,8 @@ msgid "Image Version"
 msgstr "Wersja Obrazu"
 
 #, python-format
-msgid "Image Version %s"
-msgstr "Wersja Obrazu %s"
-
-#, python-format
-msgid "Image created on: %s/%s-%s-%s-backup-%s_mmc.zip"
-msgstr "Obraz utworzony na: %s/%s-%s-%s-backup-%s_mmc.zip"
-
-#, python-format
-msgid "Image created on: %s/%s-%s-%s-backup-%s_recovery.zip"
-msgstr "Obraz utworzony na: %s/%s-%s-%s-backup-%s_recovery.zip"
+msgid "Image created on: %s/%s-%s-%s-backup-%s_recovery_emmc.zip"
+msgstr "Obraz utworzony na: %s/%s-%s-%s-backup-%s_recovery_emmc.zip"
 
 #, python-format
 msgid "Image created on: %s/%s-%s-%s-backup-%s_usb.zip"
@@ -8534,12 +8655,6 @@ msgstr "Info o programie"
 
 msgid "Init"
 msgstr "Zainicjować"
-
-msgid "Init SDCARD"
-msgstr "Zainicjuj SDCARD"
-
-msgid "Init SDcard"
-msgstr "Zainicjuj SDcard"
 
 msgid "Initial fast forward speed"
 msgstr "Początkowa prędkość do przodu"
@@ -8788,23 +8903,23 @@ msgid "Israel"
 msgstr "Izrael"
 
 msgid "It follows:"
-msgstr ""
+msgstr "Wynika:"
 
 msgid "It is not possible to calculate hashes on <List of Storage Devices>"
-msgstr ""
+msgstr "Obliczanie skrótów na <Lista urządzeń pamięci masowej> nie jest możliwe"
 
 msgid "It is not possible to change the file mode of <List of Storage Devices>"
-msgstr ""
+msgstr "Nie można zmienić trybu pliku <Lista urządzeń pamięci>"
 
 msgid "It is not possible to get the file status of <List of Storage Devices>"
-msgstr ""
+msgstr "Nie można uzyskać statusu pliku <Lista urządzeń pamięci>"
 
 #, python-format
 msgid "It is not possible to run '%s' on <List of Storage Devices>"
-msgstr ""
+msgstr "Nie można uruchomić '%s' na <Lista urządzeń pamięci>"
 
 msgid "It's not possible to rename the filesystem root."
-msgstr ""
+msgstr "Nie można zmienić nazwy katalogu głównego systemu plików."
 
 msgid "Italian"
 msgstr "Włoski"
@@ -8921,6 +9036,9 @@ msgstr "Klawiatura"
 
 msgid "Keyboard data entry"
 msgstr "Wprowadzanie danych z klawiatury"
+
+msgid "Keyboard long"
+msgstr "Klawiatura (długo)"
 
 msgid "Keyboard map"
 msgstr "Układ klawiatury"
@@ -9079,8 +9197,8 @@ msgid "Last speed"
 msgstr "Ostatnia prędkość"
 
 #, python-format
-msgid "Last update:\t\t%s"
-msgstr "Ostatnia aktualizacja:\t%s"
+msgid "Last E2 update:\t\t%s"
+msgstr "Ostatnia aktualizacja E2:\t%s"
 
 msgid "Last used share: "
 msgstr "Ostatnio używane udziały: "
@@ -9859,29 +9977,29 @@ msgstr "Tryb przenoszenia wył."
 msgid "Move mode on"
 msgstr "Tryb przenoszenia wł."
 
-msgid "Move the text buffer cursor left"
-msgstr "Przesuń kursor bufora tekstu w lewo"
+msgid "Move the keyboard cursor down"
+msgstr "Przesuń kursor klawiatury w dół"
 
-msgid "Move the text buffer cursor right"
-msgstr "Przesuń kursor bufora tekstu w prawo"
+msgid "Move the keyboard cursor left"
+msgstr "Przesuń kursor klawiatury w lewo"
 
-msgid "Move the text buffer cursor to the first character"
-msgstr "Przesuń kursor bufora tekstu na pierwszy znak"
+msgid "Move the keyboard cursor right"
+msgstr "Przesuń kursor klawiatury w prawo"
 
-msgid "Move the text buffer cursor to the last character"
-msgstr "Przesuń kursor bufora tekstu na ostatni znak"
+msgid "Move the keyboard cursor up"
+msgstr "Przesuń kursor klawiatury w górę"
 
-msgid "Move the virtual keyboard cursor down"
-msgstr "Przesuń kursor wirtualnej klawiatury w dół"
+msgid "Move the text cursor left"
+msgstr "Przesuń kursor tekstowy w lewo"
 
-msgid "Move the virtual keyboard cursor left"
-msgstr "Przesuń kursor wirtualnej klawiatury w lewo"
+msgid "Move the text cursor right"
+msgstr "Przesuń kursor tekstowy w prawo"
 
-msgid "Move the virtual keyboard cursor right"
-msgstr "Przesuń kursor wirtualnej klawiatury w prawo"
+msgid "Move the text cursor to the first character"
+msgstr "Przesuń kursor tekstowy do pierwszego znaku"
 
-msgid "Move the virtual keyboard cursor up"
-msgstr "Przesuń kursor wirtualnej klawiatury w górę"
+msgid "Move the text cursor to the last character"
+msgstr "Przesuń kursor tekstowy na ostatni znak"
 
 msgid "Move to home of list"
 msgstr "Przenieś do domowej listy"
@@ -9961,12 +10079,15 @@ msgstr "MultiBoot Image Manager"
 msgid "MultiEPG settings"
 msgstr "Ust. MultiEPG"
 
-msgid "MultiQuickButton"
-msgstr "Przycisk MultiQuick"
+msgid "MultiBoot Image Selector"
+msgstr "Selektor Obrazów MultiBoot"
 
 #, python-format
-msgid "Multiboot ERROR! - no %s in boot partition."
-msgstr "BŁĄD Multiboot! - nie %s na partycji rozruchowej."
+msgid "MultiBootSelector Actions"
+msgstr "Akcje MultiBootSelector"
+
+msgid "MultiQuickButton"
+msgstr "Przycisk MultiQuick"
 
 msgid "Multiboot Image Selector"
 msgstr "Selektor obrazów Multiboot"
@@ -9977,15 +10098,6 @@ msgstr "Obraz Multiboot utworzony w: %s/%s-%s-%s-backup-%s_usb.zip"
 
 msgid "Multiboot Manager"
 msgstr "Menedżer Multiboot"
-
-msgid "Multiboot manager - Cannot initialize SDcard when running image on SDcard."
-msgstr "Menedżer multiboot - Nie można zainicjować karty SD podczas uruchamiania obrazu na karcie SD."
-
-msgid "Multiboot manager - SDcard initialization run, please restart your Image."
-msgstr "Menedżer multiboot - Uruchomienie inicjalizacji karty SD, zrestartuj swój obraz."
-
-msgid "Multiboot manager - The SDcard must be at least 8MB."
-msgstr "Menedżer multiboot - Karta SD musi mieć co najmniej 8 MB."
 
 msgid "Multimedia"
 msgstr ""
@@ -10453,7 +10565,7 @@ msgid "No transparency"
 msgstr "Brak przejrzystości"
 
 msgid "No tuner is available for recording a timer!\n"
-msgstr "Brak tunera do nagrania Timera!!\n"
+msgstr "Nie jest dostępny tuner do nagrywania timera!\n"
 
 msgid ""
 "No tuner is available for recording a timer!\n"
@@ -10467,7 +10579,7 @@ msgstr ""
 "\n"
 
 msgid "No tuner is configured for use with a diseqc positioner!"
-msgstr "Brak skonfigurowanego tunera do współpracy z pozycjonerem diseqc!"
+msgstr "Żaden tuner nie jest skonfigurowany do użytku z pozycjonerem diseqc!"
 
 msgid ""
 "No tuner is enabled!\n"
@@ -10584,7 +10696,7 @@ msgid "Not Shown"
 msgstr "Nie Pokazywać"
 
 msgid "Not allowed with folders"
-msgstr ""
+msgstr "Niedozwolone w folderach"
 
 msgid "Not associated"
 msgstr "Nie związane"
@@ -11559,6 +11671,8 @@ msgid ""
 "Please set up tuner A\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner A\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid "Please set up tuner B"
 msgstr "Skonfiguruj tuner B"
@@ -11567,6 +11681,8 @@ msgid ""
 "Please set up tuner B\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner B\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid "Please set up tuner C"
 msgstr "Skonfiguruj tuner C"
@@ -11575,6 +11691,8 @@ msgid ""
 "Please set up tuner C\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner C\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid "Please set up tuner D"
 msgstr "Skonfiguruj tuner D"
@@ -11583,46 +11701,64 @@ msgid ""
 "Please set up tuner D\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner D\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner E\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner E\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner F\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner F\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner G\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner G\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner H\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner H\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner I\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner I\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner J\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner J\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner Q\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner Q\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid ""
 "Please set up tuner R\n"
 "For Hybrid Tuner Models switch Tuner Type with left and right keys"
 msgstr ""
+"Skonfiguruj tuner R\n"
+"W modelach tunerów hybrydowych przełącz typ tunera za pomocą lewego i prawego klawisza"
 
 msgid "Please set your time zone"
 msgstr "Proszę ustawić swoją strefę czasową"
@@ -11923,9 +12059,6 @@ msgstr "Naciśnij przycisk '0', aby włączyć tryb PiP"
 
 msgid "Press INFO on your remote control for additional information."
 msgstr "Wciśnij INFO na pilocie, aby uzyskać dodatkowe informacje."
-
-msgid "Press Init to format SDcard."
-msgstr "Naciśnij przycisk Init, aby sformatować kartę SD."
 
 msgid "Press MENU on your remote control for additional options."
 msgstr "Wciśnij MENU na pilocie, aby mieć dostęp do dodatkowych opcji."
@@ -12629,9 +12762,6 @@ msgstr "Kod do pilota zdalnego sterowania"
 msgid "Remote box"
 msgstr "Zdalny odbiornik"
 
-msgid "Remote control model shown"
-msgstr "Kod Pilota"
-
 msgid "Remote control type"
 msgstr "Typ zdalnego sterowania"
 
@@ -13059,22 +13189,19 @@ msgid "SCPC optimized search range"
 msgstr "SCPC zoptymalizowany zakres wyszukiwania"
 
 msgid "SCR timing adjustment, in conjunction with SCR socket and operation of several SCR devices with one cable."
-msgstr ""
+msgstr "Regulacja rozrządu SCR w połączeniu z gniazdem SCR i obsługa kilku urządzeń SCR za pomocą jednego kabla."
 
 msgid "SD"
 msgstr ""
 
-msgid "SDcard is not initialised for multiboot - Exit and use MultiBoot Image Manager to initialise"
-msgstr ""
-
 msgid "SDcard switch ERROR! - H9 root files not transferred to SD card"
-msgstr ""
+msgstr "Przełącznik karty SD BŁĄD! - Pliki główne H9 nie zostały przesłane na kartę SD"
 
 msgid "SDcard switch ERROR! - already on Nand"
-msgstr ""
+msgstr "Przełącznik karty SD BŁĄD! - już na Nand"
 
 msgid "SDcard switch ERROR! - already on mmc"
-msgstr ""
+msgstr "Przełącznik karty SD BŁĄD! - już na mmc"
 
 msgid "SID"
 msgstr ""
@@ -13495,7 +13622,7 @@ msgid "Select Enigma2 Skin"
 msgstr "Wybierz skórę dla Enigma2"
 
 msgid "Select Fast DiSEqC if your aerial system supports this. If you are unsure select 'no'."
-msgstr ""
+msgstr "Wybierz Fast DiSEqC, jeśli twój system antenowy to obsługuje. Jeśli nie jesteś pewien, wybierz „nie”."
 
 msgid "Select HDD"
 msgstr "Wybierz HDD"
@@ -13684,11 +13811,17 @@ msgstr "Wybierz częstotliwość pasma użytkownika, która ma zostać przypisan
 msgid "Select the User Band frequency to be assigned to this tuner. This is the frequency the SCR switch uses to pass the requested transponder to the tuner."
 msgstr "Wybierz częstotliwość pasma użytkownika, która ma zostać przypisana do tego tunera. Jest to częstotliwość używana przez przełącznik SCR do przekazania żądanego transpondera do tunera."
 
-msgid "Select the character or action under the virtual keyboard cursor"
-msgstr "Wybierz znak lub akcję pod wirtualnym kursorem klawiatury"
+msgid "Select the character or action under the keyboard cursor"
+msgstr "Wybierz znak lub akcję pod kursorem klawiatury"
 
 msgid "Select the desired function and click on \"OK\" to assign it. Use \"CH+/-\" to toggle between the lists. Select an assigned function and click on \"OK\" to de-assign it. Use \"Next/Previous\" to change the order of the assigned functions."
 msgstr "Wybierz żądaną funkcję i kliknij 'OK ',aby go przypisać.Użyj 'CH +/-' aby przełączać między listami.Wybierz przypisaną funkcję i kliknij 'OK ' aby przypisać. Użyj 'następny/poprzedni 'aby zmienić kolejność przypisanych funkcji."
+
+msgid "Select the highlighted image and reboot"
+msgstr "Wybierz podświetlony obraz i uruchom ponownie"
+
+msgid "Select the locale from a menu"
+msgstr "Wybierz ustawienia regionalne z menu"
 
 msgid "Select the manufacturer of your SCR device. If the manufacturer is not listed, set 'SCR' to 'user defined' and enter the device parameters manually according to its spec sheet."
 msgstr "Wybierz producenta swojego urządzenia SCR. Jeśli producenta nie ma na liście, ustaw „SCR” na „zdefiniowane przez użytkownika” i ręcznie wprowadź parametry urządzenia zgodnie z jego specyfikacją."
@@ -13723,6 +13856,12 @@ msgstr "Wybierz satelitę, którą chcesz skonfigurować. Po skonfigurowaniu teg
 msgid "Select the satellite your dish receives from. If you are unsure select 'automatic' and the receiver will attempt to determine this for you."
 msgstr "Wybierz satelitę, z którego odbierana jest antena. Jeśli nie masz pewności, wybierz „automatyczny”, a odbiornik spróbuje to ustalić."
 
+msgid "Select the shifted character set"
+msgstr "Wybierz przesunięty zestaw znaków"
+
+msgid "Select the shifted character set for the next character only"
+msgstr "Wybierz przesunięty zestaw znaków tylko dla następnego znaku"
+
 msgid "Select the sleep timer action."
 msgstr "Wybierz działanie wyłącznika czasowego."
 
@@ -13743,15 +13882,6 @@ msgstr "Wybierz typ używanego LNB / urządzenia (zwykle „Uniwersalny”). Je�
 
 msgid "Select the type of Single Cable Reception device you are using."
 msgstr "Wybierz typ używanego urządzenia do odbioru pojedynczego kabla."
-
-msgid "Select the virtual keyboard locale from a menu"
-msgstr "Wybierz ustawienia regionalne wirtualnej klawiatury z menu"
-
-msgid "Select the virtual keyboard shifted character set"
-msgstr "Wybierz zestaw znaków z przesuniętą klawiaturą wirtualną"
-
-msgid "Select the virtual keyboard shifted character set for the next character only"
-msgstr "Wybierz zestaw znaków przesunięty na klawiaturze wirtualnej tylko dla następnego znaku"
 
 msgid "Select upgrade source"
 msgstr "Wybierz źródło aktualizacji"
@@ -15162,6 +15292,10 @@ msgstr "Wybór Skóry"
 msgid "Skin setup"
 msgstr "Ust. Skóry"
 
+#, python-format
+msgid "Skin:\t\t%s"
+msgstr "Skóra:\t\t%s"
+
 msgid "SkinSelector"
 msgstr "Selektor Skór"
 
@@ -15228,6 +15362,14 @@ msgstr "Przesuwane od góry do dołu"
 #, python-format
 msgid "Slot %d"
 msgstr "Gniazdo  %d"
+
+#, python-format
+msgid "Slot %s: %s - Mode %d%s"
+msgstr "Gniazdo %s: %s - Tryb %d%s"
+
+#, python-format
+msgid "Slot %s: %s%s"
+msgstr "Gniazdo %s: %s%s"
 
 msgid "Slovak"
 msgstr "Słowacki"
@@ -15723,7 +15865,7 @@ msgid "Streaming"
 msgstr "Strumieniowanie"
 
 msgid "Streaming clients info"
-msgstr "O Strumieniowaniu"
+msgstr "Strumieniowanie"
 
 msgid "Streaming recording ended"
 msgstr "Nagrywanie strumieniowe zakończone"
@@ -15754,7 +15896,7 @@ msgid "Stumm"
 msgstr ""
 
 msgid "Style:"
-msgstr ""
+msgstr "Styl:"
 
 msgid "Subservice list..."
 msgstr "Lista podserwisów ..."
@@ -16035,6 +16177,9 @@ msgstr ""
 
 msgid "TB"
 msgstr ""
+
+msgid "TEXT"
+msgstr "TEKST"
 
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
@@ -17453,7 +17598,10 @@ msgid "Tuner settings"
 msgstr "Ustawienia tunera"
 
 msgid "Tuner slot"
-msgstr "Gniazdo karty"
+msgstr "Gniazdo tunera"
+
+msgid "Turn on the control LED."
+msgstr "Włącz kontrolną diodę LED."
 
 msgid "Tuner status"
 msgstr "Status tunera"
@@ -18154,8 +18302,8 @@ msgid "Version %s %s"
 msgstr "Wersja %s %s"
 
 #, python-format
-msgid "Version:\t\t%s"
-msgstr "Wersja:\t\t%s"
+msgid "Version / Build:\t\t%s   (%s)"
+msgstr "Wersja / Kompilacja:\t\t%s   (%s)"
 
 msgid "Version: "
 msgstr "Wersja: "
@@ -18852,9 +19000,6 @@ msgstr "Gdzie zapisywać tymczasowe nagrania timeshiftu?"
 
 msgid "Which event do you want to save permanently?"
 msgstr "Które wydarzenie chcesz zapisać na stałe?"
-
-msgid "Which remote control gets shown. Only influences graphical representation."
-msgstr "Który pilot zostanie wyświetlony. Wpływa tylko na reprezentację graficzną."
 
 msgid "While available"
 msgstr "Kiedy dostępne"
@@ -21012,36 +21157,8 @@ msgid "slot%s - %s (current image)"
 msgstr ""
 
 #, python-format
-msgid "slot%s - %s - %s "
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s - %s (current image)"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s - %s as USB Recovery"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s mode 1"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s mode 1 (current image)"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s mode 12"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s mode 12 (current image)"
-msgstr ""
-
-#, python-format
-msgid "slot%s - %s- %s "
-msgstr ""
+msgid "slot%s - %s as USB Recovery"
+msgstr "gniazdo%s - %s jako USB Recovery"
 
 msgid "slow"
 msgstr "wolno"
@@ -21202,10 +21319,6 @@ msgstr "niedostępny"
 msgid "unconfirmed"
 msgstr "niepotwierdzony"
 
-#, fuzzy
-msgid "unknow"
-msgstr "nieznany"
-
 msgid "unknown"
 msgstr "nieznany"
 
@@ -21331,9 +21444,6 @@ msgstr "szerokość"
 
 msgid "will take about 1-15 minutes for this system\n"
 msgstr "potrwa to około 1-15 minut dla tego systemu\n"
-
-msgid "will take about 30 minutes for this system\n"
-msgstr "potrwa to około 30 minut dla tego systemu\n"
 
 msgid "winter sport"
 msgstr "sporty zimowe"

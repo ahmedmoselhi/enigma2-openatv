@@ -9,13 +9,15 @@ from Components.About import about
 from Components.ScrollLabel import ScrollLabel
 from Components.Console import Console
 from Components.SystemInfo import SystemInfo
-from enigma import eTimer, getEnigmaVersionString
+from Components.config import config
+from enigma import eTimer, getEnigmaVersionString, getDesktop
 from boxbranding import getBoxType, getMachineBuild, getMachineBrand, getMachineName, getImageVersion, getImageBuild, getDriverDate
 
 from Components.Pixmap import MultiPixmap
 from Components.Network import iNetwork
 
 from Tools.StbHardware import getFPVersion
+from Tools.Multiboot import GetCurrentImage, GetCurrentImageMode
 
 from os import path,popen
 from re import search
@@ -55,10 +57,16 @@ def parseLines(filename):
 	return ret
 
 def MyDateConverter(StringDate):
-	## StringDate must be a string "YYYY-MM-DD"
+	## StringDate must be a string "YYYY-MM-DD" or "YYYYMMDD"
 	try:
-		StringDate = StringDate.replace("-"," ")
-		StringDate = time.strftime(_("%Y-%m-%d"), time.strptime(StringDate, "%Y %m %d"))
+		if len(StringDate) == 8:
+			year = StringDate[0:4]
+			month = StringDate[4:6]
+			day = StringDate[6:8]
+			StringDate = ' '.join((year, month, day))
+		else:
+			StringDate = StringDate.replace("-"," ")
+		StringDate = time.strftime(config.usage.date.full.value, time.strptime(StringDate, "%Y %m %d"))
 		return StringDate
 	except:
 		return _("unknown")
@@ -78,47 +86,7 @@ def getAboutText():
 	if path.exists('/proc/stb/info/chipset'):
 		AboutText += _("Chipset:\t\t%s") % about.getChipSetString() + "\n"
 
-	cpuMHz = ""
-	if getMachineBuild() in ('u41','u42','u43'):
-		cpuMHz = _("   (1.0 GHz)")
-	elif getMachineBuild() in ('dags72604','vusolo4k','vuultimo4k','vuzero4k','gb72604'):
-		cpuMHz = _("   (1.5 GHz)")
-	elif getMachineBuild() in ('formuler1tc','formuler1', 'triplex', 'tiviaraplus'):
-		cpuMHz = _("   (1.3 GHz)")
-	elif getMachineBuild() in ('gbmv200','u51','u5','u53','u532','u533','u52','u54','u55','u56','u5pvr','h9','h9combo','h10','cc1','sf8008','sf8008m','hd60','hd61','i55plus','ustym4kpro','beyonwizv2','viper4k','v8plus','multibox'):
-		cpuMHz = _("   (1.6 GHz)")
-	elif getMachineBuild() in ('vuuno4kse','vuuno4k','dm900','dm920', 'gb7252', 'dags7252','xc7439','8100s'):
-		cpuMHz = _("   (1.7 GHz)")
-	elif getMachineBuild() in ('alien5',):
-		cpuMHz = _("   (2.0 GHz)")
-	elif getMachineBuild() in ('vuduo4k',):
-		cpuMHz = _("   (2.1 GHz)")
-	elif getMachineBuild() in ('sf5008','et13000','et1x000','hd52','hd51','sf4008','vs1500','h7','osmio4k','osmio4kplus','osmini4k'):
-		try:
-			import binascii
-			f = open('/sys/firmware/devicetree/base/cpus/cpu@0/clock-frequency', 'rb')
-			clockfrequency = f.read()
-			f.close()
-			cpuMHz = _("   (%s MHz)") % str(round(int(binascii.hexlify(clockfrequency), 16)/1000000,1))
-		except:
-			cpuMHz = _("   (1.7 GHz)")
-	else:
-		if path.exists('/proc/cpuinfo'):
-			f = open('/proc/cpuinfo', 'r')
-			temp = f.readlines()
-			f.close()
-			try:
-				for lines in temp:
-					lisp = lines.split(': ')
-					if lisp[0].startswith('cpu MHz'):
-						#cpuMHz = "   (" +  lisp[1].replace('\n', '') + " MHz)"
-						cpuMHz = "   (" +  str(int(float(lisp[1].replace('\n', '')))) + " MHz)"
-						break
-			except:
-				pass
-
-	AboutText += _("CPU:\t\t%s") % about.getCPUString() + cpuMHz + "\n"
-	AboutText += _("Cores:\t\t%s") % about.getCpuCoresString() + "\n"
+	AboutText += _("CPU:\t\t%s  (%s)  %s cores") % (about.getCPUString(), about.getCPUSpeedString(), about.getCpuCoresString()) + "\n"
 
 	imagestarted = ""
 	bootname = ''
@@ -126,78 +94,43 @@ def getAboutText():
 		f = open('/boot/bootname', 'r')
 		bootname = f.readline().split('=')[1]
 		f.close()
-	if SystemInfo["HasRootSubdir"]:
-		image = find_rootfssubdir("STARTUP")
-		AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + image[-1:] + bootname + "\n"
-	elif getMachineBuild() in ('gbmv200','cc1','sf8008','sf8008m','ustym4kpro','beyonwizv2',"viper4k"):
-		if path.exists('/boot/STARTUP'):
-			f = open('/boot/STARTUP', 'r')
-			f.seek(5)
-			image = f.read(4)
-			if image == "emmc":
-				image = "1"
-			elif image == "usb0":
-				f.seek(13)
-				image = f.read(1)
-				if image == "1":
-					image = "2"
-				elif image == "3":
-					image = "3"
-				elif image == "5":
-					image = "4"
-				elif image == "7":
-					image = "5"
-			f.close()
-			if bootname: bootname = "   (%s)" %bootname 
-			AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + image + bootname + "\n"
-	elif getMachineBuild() in ('osmio4k','osmio4kplus','osmini4k'):
-		if path.exists('/boot/STARTUP'):
-			f = open('/boot/STARTUP', 'r')
-			f.seek(38)
-			image = f.read(1) 
-			f.close()
-			if bootname: bootname = "   (%s)" %bootname 
-			AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + image + bootname + "\n"
-	elif path.exists('/boot/STARTUP'):
-		f = open('/boot/STARTUP', 'r')
-		f.seek(22)
-		image = f.read(1) 
-		f.close()
-		if bootname: bootname = "   (%s)" %bootname 
-		AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + image + bootname + "\n"
-	elif path.exists('/boot/cmdline.txt'):
-		f = open('/boot/cmdline.txt', 'r')
-		f.seek(38)
-		image = f.read(1) 
-		f.close()
-		if bootname: bootname = "   (%s)" %bootname 
-		AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + image + bootname + "\n"
+	if SystemInfo["canMultiBoot"]:
+		slot = image = GetCurrentImage()
+		bootmode = ""
+		part = _("eMMC slot %s") %slot
+		if SystemInfo["canMode12"]:
+			bootmode = _("bootmode = %s") %GetCurrentImageMode()
+		if SystemInfo["HasHiSi"] and "sda" in SystemInfo["canMultiBoot"][slot]['device']:
+			if slot > 4:
+				image -=4
+			else:
+				image -=1
+			part = "SDcard slot %s (%s) " %(image, SystemInfo["canMultiBoot"][slot]['device'])
+		AboutText += _("Selected Image:\t\t%s") % _("STARTUP_") + str(slot) + "  (" + part + " " + bootmode + ")\n"
 
-	AboutText += _("Version:\t\t%s") % getImageVersion() + "\n"
-	AboutText += _("Build:\t\t%s") % getImageBuild() + "\n"
+	AboutText += _("Version / Build:\t\t%s  (%s)") % (getImageVersion(), MyDateConverter(getImageBuild())) + "\n"
 	AboutText += _("Kernel:\t\t%s") % about.getKernelVersionString() + "\n"
+	AboutText += _("Drivers:\t\t%s") % MyDateConverter(getDriverDate()) + "\n"
 
-	string = getDriverDate()
-	year = string[0:4]
-	month = string[4:6]
-	day = string[6:8]
-	driversdate = '-'.join((year, month, day))
-	AboutText += _("Drivers:\t\t%s") % MyDateConverter(driversdate) + "\n"
+	skinWidth = getDesktop(0).size().width()
+	skinHeight = getDesktop(0).size().height()
+
+	AboutText += _("Skin:\t\t%s") % config.skin.primary_skin.value.split("/")[0] + _("  (%s x %s)") % (skinWidth, skinHeight) + "\n"
 
 	AboutText += _("GStreamer:\t\t%s") % about.getGStreamerVersionString() + "\n"
 	AboutText += _("Python:\t\t%s") % about.getPythonVersionString() + "\n"
 
 	MyFlashDate = about.getFlashDateString()
 	if MyFlashDate != _("unknown"):
-		AboutText += _("Installed:\t\t%s") % MyFlashDate + "\n"
+		AboutText += _("Installed:\t\t%s") % MyDateConverter(MyFlashDate) + "\n"
 
-	AboutText += _("Last update:\t\t%s") % MyDateConverter(getEnigmaVersionString()) + "\n"
+	AboutText += _("Last E2 update:\t\t%s") % MyDateConverter(getEnigmaVersionString()) + "\n"
 
 	fp_version = getFPVersion()
 	if fp_version is None:
 		fp_version = ""
 	elif fp_version != 0:
-		fp_version = _("Frontprocessor version: %s") % fp_version
+		fp_version = _("Frontprocessor version:\t%s") % fp_version
 		AboutText += fp_version + "\n"
 
 	tempinfo = ""
@@ -252,24 +185,6 @@ def getAboutText():
 	AboutLcdText = AboutText.replace('\t', ' ')
 
 	return AboutText, AboutLcdText
-
-def find_rootfssubdir(file):
-	startup_content = read_startup("/boot/" + file)
-	rootsubdir = startup_content[startup_content.find("rootsubdir=")+11:].split()[0]
-	if rootsubdir.startswith("linuxrootfs"):
-		return rootsubdir
-	return
-
-def read_startup(FILE):
-	file = FILE
-	try:
-		with open(file, 'r') as myfile:
-			data=myfile.read().replace('\n', '')
-		myfile.close()
-	except IOError:
-		print "[ERROR] failed to open file %s" % file
-		data = " "
-	return data
 
 class About(Screen):
 	def __init__(self, session):

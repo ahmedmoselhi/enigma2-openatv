@@ -237,26 +237,9 @@ msgstr "     неправильне місце призначення"
 msgid "   (%s MHz)"
 msgstr "   (%s MГц)"
 
-msgid "   (1.0 GHz)"
-msgstr "   (1.0 ГГц)"
-
-msgid "   (1.3 GHz)"
-msgstr "   (1.3 ГГц)"
-
-msgid "   (1.5 GHz)"
-msgstr "   (1.5 ГГц)"
-
-msgid "   (1.6 GHz)"
-msgstr "   (1.6 ГГц)"
-
-msgid "   (1.7 GHz)"
-msgstr "   (1.7 ГГц)"
-
-msgid "   (2.0 GHz)"
-msgstr "   (2.0 ГГц)"
-
-msgid "   (2.1 GHz)"
-msgstr "   (2.1 ГГц)"
+#, python-format
+msgid "  (%s x %s)"
+msgstr "  (%s x %s)"
 
 msgid "  Menu key : Select quad channel"
 msgstr "  Кнопка Меню : Вибір 4 канальної доріжки"
@@ -453,10 +436,6 @@ msgstr "%.0f МБ"
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f ГБ"
-
-#, python-format
-msgid "%02d.%02d - %02d.%02d (%s%d min)"
-msgstr "%02d.%02d - %02d.%02d (%s%d хв.)"
 
 #, python-format
 msgid "%02d.%02d."
@@ -1113,10 +1092,12 @@ msgstr ""
 #, python-format
 msgid ""
 "%s\n"
-"Press ok to close"
+"Press ok for multiboot selection\n"
+"Press exit to close"
 msgstr ""
 "%s\n"
-"Натисніть ОК, щоб закрити"
+"Натисніть OK для вибору іміджа\n"
+"Натисніть Exit, щоб вийти"
 
 #, python-format
 msgid "%s %02d.%02d."
@@ -1165,6 +1146,10 @@ msgstr " %s (%s)"
 #, python-format
 msgid "%s (%s)\n"
 msgstr "%s (%s)\n"
+
+#, python-format
+msgid "%s - %s (%s%d min)"
+msgstr "%s - %s (%s%d хв.)"
 
 #, python-format
 msgid "%s - Setup"
@@ -1294,6 +1279,9 @@ msgstr "(Вибрати режим)"
 
 msgid "(Show only reader:"
 msgstr "(Показати тільки рідер:"
+
+msgid "(current image)"
+msgstr "(поточний імідж)"
 
 msgid "(e.g. TV wakeup, but not switched to correct input)"
 msgstr "(наприклад, телевізор включився, але не переключився на правильний вхід)"
@@ -3165,6 +3153,12 @@ msgstr "Мененджер Резервних копій"
 msgid "Backup Mode"
 msgstr "Режим збереження"
 
+msgid "Backup Mode: Flash Online\n"
+msgstr "Режим збереження: Оновлення Online\n"
+
+msgid "Backup Mode: USB Recovery\n"
+msgstr "Режим збереження: USB Відновлення\n"
+
 msgid "Backup Settings"
 msgstr "Збереження Налаштувань"
 
@@ -3620,8 +3614,8 @@ msgid "CPU priority for script execution"
 msgstr "Пріоритет СПУ для виконання скрипту"
 
 #, python-format
-msgid "CPU:\t\t%s"
-msgstr "ЦПУ: \t\t%s"
+msgid "CPU:\t\t%s  (%s)  %s cores"
+msgstr "ЦПУ: \t\t%s  (%s)  %s ядра"
 
 #, python-format
 msgid "CPU: %s"
@@ -6580,6 +6574,9 @@ msgid ""
 "\n"
 "Download it today!"
 msgstr ""
+"Переконайтеся, як IceTV може поліпшити враження від перегляду телевізора, завантаживши додаток IceTV на свій смартфон, або планшет. Додаток IceTV доступний безкоштовно з магазину додатків iTunes, магазину Google Play і магазину Windows Phone.\n"
+"\n"
+"Завантажте уже сьогодні!"
 
 msgid "Enter"
 msgstr "Ввести"
@@ -7166,7 +7163,7 @@ msgid "File"
 msgstr "Файл"
 
 msgid "File Commander"
-msgstr ""
+msgstr "File Commander"
 
 msgid "File Commander - Addon File-Viewer"
 msgstr "File Commander - Аддон перегляду файлів"
@@ -7471,8 +7468,8 @@ msgid "Front USB 3.0"
 msgstr "Передня USB 3.0"
 
 #, python-format
-msgid "Frontprocessor version: %s"
-msgstr "Версія процесора: %s"
+msgid "Frontprocessor version:\t%s"
+msgstr "Версія процесора:\t%s"
 
 msgid "Full Image Backup "
 msgstr "Повна копія Іміджу "
@@ -8155,7 +8152,7 @@ msgid "ISO path"
 msgstr "ISO шлях"
 
 msgid "IceTV"
-msgstr ""
+msgstr "IceTV"
 
 msgid "IceTV - Account selection"
 msgstr "IceTV - Вибір облікового запису"
@@ -8195,6 +8192,9 @@ msgid ""
 "\n"
 "Please check the log for details."
 msgstr ""
+"Оновлення IceTV завершено з помилками.\n"
+"\n"
+"Будь ласка, перевірте журнал для отримання деталей."
 
 #, python-format
 msgid "IceTV version %s"
@@ -8363,13 +8363,8 @@ msgstr "Версія Іміджа"
 msgid "Image Version %s"
 msgstr "Версія Іміджа %s"
 
-#, python-format
-msgid "Image created on: %s/%s-%s-%s-backup-%s_mmc.zip"
-msgstr "Імідж створено на: %s/%s-%s-%s-backup-%s_mmc.zip"
-
-#, python-format
-msgid "Image created on: %s/%s-%s-%s-backup-%s_recovery.zip"
-msgstr "Імідж створено на: %s/%s-%s-%s-backup-%s_recovery.zip"
+msgid "Image created on: %s/%s-%s-%s-backup-%s_recovery_emmc.zip"
+msgstr "Імідж створено на: %s/%s-%s-%s-backup-%s_recovery_emmc.zip"
 
 #, python-format
 msgid "Image created on: %s/%s-%s-%s-backup-%s_usb.zip"
@@ -8412,6 +8407,9 @@ msgid ""
 "\n"
 "If you already have an IceTV subscription or trial, please select 'Existing or trial user', if not, then select 'New user'."
 msgstr ""
+"Щоб дозволити Вам отримати доступ до всіх функцій служби інтелектуального запису IceTV, нам потрібно зібрати деяку основну інформацію.\n"
+"\n"
+"Якщо у Вас вже є підписка, або пробна версія IceTV, виберіть 'Існуючий, або тимчасовий користувач', якщо ні, то виберіть 'Новий користувач'."
 
 msgid ""
 "In order to record a timer, a tuner was freed successfully:\n"
@@ -8994,7 +8992,7 @@ msgid "Kurzfilm"
 msgstr "Короткометражний фільм"
 
 msgid "Kuwait"
-msgstr ""
+msgstr "Кувейт"
 
 msgid "Kyrgyzstan"
 msgstr "Киргистан"
@@ -9063,7 +9061,7 @@ msgid "Label"
 msgstr "Мітка"
 
 msgid "Landestypisch"
-msgstr ""
+msgstr "Місцева кухня"
 
 msgid "Language"
 msgstr "Мова"
@@ -9084,8 +9082,8 @@ msgid "Last speed"
 msgstr "Остання швидкість"
 
 #, python-format
-msgid "Last update:\t\t%s"
-msgstr "Останнє оновлення: \t\t%s"
+msgid "Last E2 update:\t\t%s"
+msgstr "Останнє Е2 оновлення: \t\t%s"
 
 #, python-format
 msgid "Last update:\t%s"
@@ -9284,7 +9282,7 @@ msgid "Local network"
 msgstr "Локальна мережа"
 
 msgid "Locale"
-msgstr "Місцевий"
+msgstr "Мова"
 
 msgid "Location"
 msgstr "Розташування"
@@ -9522,10 +9520,10 @@ msgid "Martinique"
 msgstr "Мартініка"
 
 msgid "Mature Adult Audience 15+"
-msgstr ""
+msgstr "Передача для аудиторії 15+"
 
 msgid "Mature Audience 15+"
-msgstr ""
+msgstr "Аудиторія 15+"
 
 msgid "Mauritania"
 msgstr "Мауританія"
@@ -10580,7 +10578,7 @@ msgid "Northern Mariana Islands"
 msgstr "Північні Маріанські острови"
 
 msgid "Norway"
-msgstr ""
+msgstr "Норвегія"
 
 msgid "Norwegian"
 msgstr "Норвежська"
@@ -11150,7 +11148,7 @@ msgid "Parent directory"
 msgstr "Головна директорія"
 
 msgid "Parental Guidance Recommended"
-msgstr ""
+msgstr "Рекомендується батьківський контроль"
 
 msgid "Parental control"
 msgstr "Батьківський контроль"
@@ -11816,7 +11814,7 @@ msgid "Porträt"
 msgstr "Портрет"
 
 msgid "Portugal"
-msgstr ""
+msgstr "Португалія"
 
 msgid "Portuguese"
 msgstr "Португальська"
@@ -12292,7 +12290,7 @@ msgid "QuickMenu/Extensions"
 msgstr "Швидке меню/Розширення"
 
 msgid "Quiz"
-msgstr ""
+msgstr "Вікторина"
 
 msgid "RAM"
 msgstr "RAM"
@@ -12933,7 +12931,7 @@ msgid "Restrict the active time range"
 msgstr "Обмежити активний діапазон часу"
 
 msgid "Restricted 18+"
-msgstr ""
+msgstr "Обмеження 18+"
 
 msgid "Resume from last position"
 msgstr "Продовжити з останньої позиції"
@@ -15188,6 +15186,10 @@ msgstr "Налаштування скіну"
 msgid "Skin setup"
 msgstr "Налаштування скіну"
 
+#, python-format
+msgid "Skin:\t\t%s"
+msgstr "Скін:\t\t%s"
+
 msgid "SkinSelector"
 msgstr "Вибір Скіну"
 
@@ -15254,6 +15256,14 @@ msgstr "Слайд-шоу зверху вниз"
 #, python-format
 msgid "Slot %d"
 msgstr "Слот %d"
+
+#, python-format
+msgid "Slot %s: %s%s"
+msgstr "Слот %s: %s%s"
+
+#, python-format
+msgid "Slot %s: %s - Mode %d%s"
+msgstr "Слот %s: %s - Режим %d%s"
 
 msgid "Slovak"
 msgstr "Словацька"
@@ -16064,12 +16074,12 @@ msgstr "ТБ"
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
-"Переклад:  kvinto - 21.03.2019\n"
+"Переклад:  kvinto - 06.05.2020\n"
 "Сторінка:    https://gisclub.tv\n"
 "                  kvinto@rambler.ru"
 
 msgid "TS file is too large for ISO9660 level 1!"
-msgstr "TS файл занадто великий для ISO9660 level 1!"
+msgstr "TS файл занадто великий для ISO9660 рівень 1!"
 
 msgid "TSID"
 msgstr "TSID"
@@ -16286,10 +16296,12 @@ msgid ""
 "The IceTV server can not be reached. Try checking the Internet connection on your %s %s\n"
 "Details"
 msgstr ""
+"Неможливо підключитися до сервера IceTV. Спробуйте перевірити підключення до Інтернету на %s %s\n"
+"Деталі"
 
 #, python-format
 msgid "The IceTV server has requested password for %s."
-msgstr ""
+msgstr "Сервер IceTV запитує пароль для %s."
 
 msgid "The Image Viewer component of the File Commander requires the PicturePlayer extension. Install PicturePlayer to enable this operation."
 msgstr "Компонент засобу перегляду зображень File Commander вимагає розширення PicturePlayer. Встановіть PicturePlayer, щоб увімкнути цю операцію."
@@ -19779,6 +19791,10 @@ msgstr "чорний список"
 msgid "blue"
 msgstr "синій"
 
+#, python-format
+msgid "bootmode = %s"
+msgstr "режим = %s"
+
 msgid "bottom"
 msgstr "знизу"
 
@@ -19972,6 +19988,10 @@ msgstr "драйвера"
 
 msgid "eMMC"
 msgstr "eMMC"
+
+#, python-format
+msgid "eMMC slot %s"
+msgstr "eMMC слот %s"
 
 msgid "eSATA"
 msgstr "eSATA"
@@ -21047,8 +21067,8 @@ msgid "slot%s - %s - %s (current image)"
 msgstr "слот%s - %s - %s (поточний імідж)"
 
 #, python-format
-msgid "slot%s - %s - %s as USB Recovery"
-msgstr "слот%s - %s - %s USB Відновлення"
+msgid "slot%s - %s as USB Recovery"
+msgstr "слот%s - %s відновлення з USB"
 
 #, python-format
 msgid "slot%s - %s mode 1"
@@ -21357,9 +21377,6 @@ msgstr "ширина"
 
 msgid "will take about 1-15 minutes for this system\n"
 msgstr "для цієї системи займе близько 1-15 хвилин\n"
-
-msgid "will take about 30 minutes for this system\n"
-msgstr "для цієї системи займе близько 30 хвилин\n"
 
 msgid "winter sport"
 msgstr "зимовий спорт"

@@ -86,10 +86,14 @@
 		<key id="KEY_FASTFORWARD" mapto="next" flags="mr" />
 		<key id="KEY_NEXT" mapto="last" flags="m" />
 		<key id="KEY_DOWN" mapto="down" flags="mr" />
-		<key id="KEY_STOP" mapto="backspace" flags="mr" />
 		<key id="KEY_LAST" mapto="backspace" flags="mr" />
+		<key id="KEY_STOP" mapto="backspace" flags="mr" />
 		<key id="KEY_PLAYPAUSE" mapto="delete" flags="mr" />
 		<key id="KEY_PLAY" mapto="delete" flags="mr" />
+		<key id="KEY_VIDEO" mapto="erase" flags="m" />
+		<key id="KEY_MEDIA" mapto="erase" flags="m" />
+		<key id="KEY_LIST" mapto="erase" flags="m" />
+		<key id="KEY_PVR" mapto="erase" flags="m" />
 		<key id="KEY_INFO" mapto="toggleOverwrite" flags="m" />
 		<key id="KEY_0" mapto="0" flags="m" />
 		<key id="KEY_1" mapto="1" flags="m" />
@@ -1165,6 +1169,8 @@
 		<key id="KEY_FAST" mapto="fast_long" flags="l"/>
 		<key id="KEY_RECALL" mapto="recall" flags="b"/>
 		<key id="KEY_RECALL" mapto="recall_long" flags="l"/>
+		<key id="KEY_KEYBOARD" mapto="keyboard" flags="b"/>
+		<key id="KEY_KEYBOARD" mapto="keyboard_long" flags="l"/>
 	</map>
 	<map context="SubtitlesActions">
 		<key id="KEY_SUBTITLE" mapto="subtitles" flags="m" />

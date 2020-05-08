@@ -1128,6 +1128,8 @@
 		<key id="KEY_FAST" mapto="fast_long" flags="l"/>
 		<key id="KEY_RECALL" mapto="recall" flags="b"/>
 		<key id="KEY_RECALL" mapto="recall_long" flags="l"/>
+		<key id="KEY_KEYBOARD" mapto="keyboard" flags="b"/>
+		<key id="KEY_KEYBOARD" mapto="keyboard_long" flags="l"/>
 	</map>
 	<map context="SubtitlesActions">
 		<key id="KEY_SUBTITLE" mapto="subtitles" flags="m" />
