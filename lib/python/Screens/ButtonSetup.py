@@ -161,6 +161,8 @@ def getButtonSetupKeys():
 		(_("Playmode long"), "playmode_long", ""),
 		(_("USB"), "usb", ""),
 		(_("USB long"), "usb_long", ""),
+		(_("Slow"), "slow", ""),
+		(_("Slow long"), "slow_long", ""),
 		(_("Fast"), "fast", ""),
 		(_("Fast long"), "fast_long", ""),
 		(_("Keyboard"), "keyboard", ""),
