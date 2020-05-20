@@ -14034,7 +14034,7 @@ msgstr "Seleziona la tua regione. Se non è disponibile, cambia la nazione in �
 
 #, python-format
 msgid "Selected Image:\t\t%s"
-msgstr "Immagine selezionata:\t\t%s"
+msgstr "Immagine selezionata:\t%s"
 
 #, fuzzy, python-format
 msgid ""
@@ -18990,9 +18990,6 @@ msgstr "Se abilitata, la risoluzione di uscita del Box, tenterà di portarsi all
 
 msgid "When enabled, measure power consumption to detect when the rotor stops turning (when supported by the tuner)."
 msgstr "Se abilitata, misura il consumo di energia per rilevare quando il rotore smette di girare (se supportato dal tuner)."
-
-msgid "When enabled, network trash can's are probed for cleaning."
-msgstr "Se abilitata, il cestino di rete viene usato per la pulizia."
 
 msgid "When enabled, network trash cans are probed for cleaning."
 msgstr "Se abilitata, il cestino di rete sarà esplorato per la pulizia."

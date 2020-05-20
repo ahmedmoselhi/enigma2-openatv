@@ -99,7 +99,8 @@ def getButtonSetupKeys():
 		(_("Fastforward"), "fastforward", ""),
 		(_("Skip back"), "skip_back", ""),
 		(_("Skip forward"), "skip_forward", ""),
-		(_("activatePiP"), "activatePiP", ""),
+		(_("Activate Picture in Picture"), "activatePiP", ""),
+		(_("PiP usage Setup"), "activatePiPlong", ""),
 		(_("Playlist"), "playlist", ""),
 		(_("Playlist long"), "playlist_long", ""),
 		(_("Nextsong"), "nextsong", ""),
@@ -238,10 +239,9 @@ def getButtonSetupFunctions():
 	ButtonSetupFunctions.append((_("Letterbox zoom"), "Infobar/vmodeSelection", "InfoBar"))
 	ButtonSetupFunctions.append((_("Seekbar"), "Infobar/seekFwdVod", "InfoBar"))
 	if SystemInfo["PIPAvailable"]:
-		ButtonSetupFunctions.append((_("Show PIP"), "Infobar/showPiP", "InfoBar"))
-		ButtonSetupFunctions.append((_("Swap PIP"), "Infobar/swapPiP", "InfoBar"))
-		ButtonSetupFunctions.append((_("Move PIP"), "Infobar/movePiP", "InfoBar"))
-		ButtonSetupFunctions.append((_("Toggle PIPzap"), "Infobar/togglePipzap", "InfoBar"))
+		ButtonSetupFunctions.append((_("Activate Picture in Picture"), "Infobar/runmodePiPblue", "InfoBar"))
+		ButtonSetupFunctions.append((_("Swap screen"), "Infobar/runmodePiPyellow", "InfoBar"))
+		ButtonSetupFunctions.append((_("PiPSetup"), "Infobar/runmodePiPgreen", "InfoBar"))
 	ButtonSetupFunctions.append((_("Activate HbbTV (Redbutton)"), "Infobar/activateRedButton", "InfoBar"))
 	if getHaveHDMIinHD() == 'True' or getHaveHDMIinFHD() == 'True':
 		ButtonSetupFunctions.append((_("Toggle HDMI-In full screen"), "Infobar/HDMIInFull", "InfoBar"))
@@ -708,4 +708,3 @@ class InfoBarButtonSetup():
 
 	def ToggleLCDLiveTV(self):
 		config.lcd.showTv.value = not config.lcd.showTv.value
-
