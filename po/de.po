@@ -3203,7 +3203,7 @@ msgid "Auto Timers"
 msgstr "AutoTimer"
 
 msgid "Auto Volume Level"
-msgstr ""
+msgstr "Automatische Lautstärkeanpassung"
 
 msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Automatischer Kapitelwechsel alle x Minuten (0=nie)"
@@ -3216,7 +3216,7 @@ msgid "Auto focus"
 msgstr "Auto Fokus"
 
 msgid "Auto focus commencing ..."
-msgstr ""
+msgstr "Auto Fokus startet..."
 
 msgid "Auto language selection"
 msgstr "Automatische Sprachauswahl"
@@ -3708,7 +3708,7 @@ msgid "Bouvet Island"
 msgstr "Bouvet Insel"
 
 msgid "Box or driver is not support Quad PiP."
-msgstr "Box oder Treiber unterstützen Quad PiP nicht."
+msgstr "Box oder Treiber unterstützen Quad Bild im Bild nicht!"
 
 msgid "Boxen"
 msgstr "Boxen"
@@ -7994,8 +7994,8 @@ msgid ""
 "\n"
 "Set this option now?"
 msgstr ""
-"Für die einfache Bedienung kann die Funktionsweise der Blauen Taste geändert werden!\n"
-"Blaue Taste: Blau-Kurz/Blau-Lang  ->  Erweiterungen/QuickMenu\n"
+"Für die einfache Bedienung kann die Funktionsweise der Taste BLAU geändert werden!\n"
+"Taste BLAU kurz/lang -> Erweiterungen/QuickMenu\n"
 "\n"
 "Soll die Änderung übernommen werden?"
 
@@ -10258,7 +10258,7 @@ msgid "Mannschaftssport"
 msgstr "Mannschaftssport"
 
 msgid "Manual"
-msgstr ""
+msgstr "Manuell"
 
 msgid "Manual Scan"
 msgstr "Manueller Suchlauf"
@@ -10341,7 +10341,7 @@ msgstr "Maxdown: "
 
 #, python-format
 msgid "Maximum minutes to jump %d !"
-msgstr "Sie können nur maximal %d Minuten springen !"
+msgstr "Sie können nur maximal %d Minuten springen!"
 
 msgid "Maximum no of days:"
 msgstr "Maximale Anzahl von Tagen:"
@@ -12248,14 +12248,14 @@ msgid "PiP"
 msgstr "Bild im Bild"
 
 msgid "PiP-Zap"
-msgstr "Bild im Bild-Zap"
+msgstr "Bild im Bild Zap"
 
 #
 msgid "PiPSetup"
-msgstr "Bild im Bild-Einstellungen"
+msgstr "Bild im Bild Einstellungen"
 
 msgid "PiPZap"
-msgstr "Bild im Bild-Zap"
+msgstr "Bild im Bild Zap"
 
 msgid "Picon"
 msgstr "Picon"
@@ -12276,7 +12276,7 @@ msgstr "Mini-TV im vertikalen EPG anzeigen"
 
 #
 msgid "Picture in Picture Setup"
-msgstr "Bild im Bild-Einstellungen"
+msgstr "Bild im Bild Einstellungen"
 
 msgid "Picture in graphics"
 msgstr "Mini-TV Bild im grafischen EPG anzeigen"
@@ -12302,10 +12302,10 @@ msgid "Pilot"
 msgstr "Pilot"
 
 msgid "PiP standard Setup"
-msgstr "PiP-Standard Setup"
+msgstr "Bild im Bild Standardeinstellungen"
 
 msgid "PiP usage Setup"
-msgstr "PiP-Verwendung Setup"
+msgstr "Bild im Bild Einstellungen"
 
 msgid "Pitcairn"
 msgstr "Pitcairn"
@@ -12505,7 +12505,7 @@ msgstr "Auf das zuletzt ausgewählte Medium konnte nicht zugegriffen werden, dah
 
 #
 msgid "Please open Picture in Picture first"
-msgstr "Bitte erst Bild im Bild aktivieren (Bild im Bild-Zap)"
+msgstr "Bitte erst Bild im Bild aktivieren (Bild im Bild Zap)"
 
 #
 msgid "Please press OK to continue."
@@ -13036,13 +13036,13 @@ msgid "PiP mode"
 msgstr "Bild im Bild Modus"
 
 msgid "Choose what you want the PIP mode how to works."
-msgstr "Wähle aus, wie der Bild im Bild Modus funktionieren soll."
+msgstr "Wählen Sie, wie der Bild im Bild Modus funktionieren soll."
 
 msgid "Ads filtering mode"
 msgstr "Werbefiltermodus"
 
 msgid "Side by side mode"
-msgstr "Side-by-Side-Modus"
+msgstr "Side-by-Side Modus"
 
 # PiPSetup.py
 msgid "Press '0' to toggle PiP mode"
@@ -13372,13 +13372,13 @@ msgid "Quad PiP Channel Selection"
 msgstr "Quad Bild im Bild Kanalauswahl"
 
 msgid "Quad PiP Screen"
-msgstr ""
+msgstr "Quad Bild im Bild Bildschirm"
 
 msgid "Quad PiP channel "
-msgstr ""
+msgstr "Quad Bild im Bild Kanal"
 
 msgid "Quad PiP is not available."
-msgstr ""
+msgstr "Quad Bild im Bild ist nicht verfügbar!"
 
 msgid "Question"
 msgstr "Frage"
@@ -18327,7 +18327,7 @@ msgid "This option allows you to enable 3D Surround Sound."
 msgstr "Einstellen der 3D Surround Sound Ausgabe."
 
 msgid "This option allows you to place the colored buttons (red, green, yellow, blue) to the first in the Extensions list."
-msgstr "Mit dieser Option können Sie die farbigen Schaltflächen (rot, grün, gelb, blau) an die erste Stelle in der Liste der Erweiterungen setzen."
+msgstr "Mit dieser Option können Sie die farbigen Schaltflächen ROT, GRÜN, GELB oder BLAU an die erste Stelle in der Liste der Erweiterungen setzen."
 
 msgid "This option allows you to hide and sorting of the menus"
 msgstr "Einstellen, wie Menüeinträge sortiert oder versteckt werden sollen."
