@@ -1541,6 +1541,11 @@ class NativeSlotManager(Setup):
 		for _slotCode, rootSubdir, _startupData in self.slotPlan:
 			cmdlist.append(f"/bin/mkdir -p {rootMountPoint}/{rootSubdir}")
 		cmdlist.append(f"/bin/umount {rootMountPoint}")
+		# Keep the shared data partition available to the media manager after the
+		# GUI restart.  Flash Manager needs a mounted, writable device for the
+		# downloaded image; suppressing automount for this partition leaves an SSD
+		# used exclusively for MultiBoot with no suitable download location.
+		cmdlist.append(f"/bin/rm -f /dev/nomount.{target} /dev/nomount.{rootDevice.rsplit('/', 1)[-1]}")
 		cmdlist.append(f"/bin/mount {realpath(startupDevice)} {mountPoint}")
 		self.session.openWithCallback(self.formatDeviceCallback, ConsoleScreen, title=self.getTitle(), cmdlist=cmdlist)
 
